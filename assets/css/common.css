@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* CSS Document */
+html {
+  font-size: 62.5%; /* 16px * 62.5% = 10px */
+  width: 100%;
+}
+body {
+  color: #333; /* RGB */
+  background-color: #FFF;
+  font-family:YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
+  font-weight: 500;
+  font-size: 1.6em;
+  line-height: 2.4rem;
+  text-align: center;
+}
+section h2 {
+  font-size: 2.4rem;
+}
+a:hover {
+  opacity: 0.5;
+}
+*, :before, *:after {
+  box-sizing: border-box;
+}
+main{
+  background-color: #FFF;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.none{
+  display: none;
+}
+.sp{
+  display: none;
+}

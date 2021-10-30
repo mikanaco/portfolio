@@ -1,0 +1,763 @@
+@charset "utf-8";
+/* CSS Document */
+header {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-image {
+  width: 18vw;
+  min-width: 220px;
+  margin: 0 30px;
+}
+.main-nav ul {
+  display: flex;
+}
+.main-nav ul li {
+  list-style: none;
+  margin-left: 50px;
+}
+.main-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.3vw;
+  font-weight: 900;
+}
+/*header　SP*/
+@media(max-width:940px) {
+  .main-nav {
+    display: none;
+  }
+  #nav-open {
+    width: 30px;
+    height: 22px;
+  }
+}
+#page-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+#page-top a {
+  text-decoration: none;
+  width: 5vw;
+  min-width: 40px;
+  padding: 30px 0;
+  display: block;
+}
+#page-top a img {
+  width: 100%;
+}
+#page-top a:hover {
+  background: #999;
+}
+/*ハンバーガーアイコン*/
+@media(max-width:940px) {
+  #nav-drawer {
+    padding: 10px 24px 0 0;
+    text-align: right;
+    position: relative;
+  }
+  #nav-open {
+    width: 30px;
+    height: 22px;
+    margin: 15px;
+  }
+  #nav-open span, #nav-open span:before, #nav-open span:after {
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    background-color: #A83C40;
+    display: block;
+    content: "";
+  }
+  #nav-open span:before {
+    bottom: -8px;
+  }
+  #nav-open span:after {
+    bottom: -16px;
+  }
+  #nav-close {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+  }
+  #nav-content {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 70%;
+    height: 100%;
+    background-color: #A83C40;
+    text-align: left;
+    transform: translateX(-105%);
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.25);
+    transition: 0.3s ease-in-out;
+  }
+  #nav-input:checked ~ #nav-close {
+    display: block;
+  }
+  #nav-input:checked ~ #nav-content {
+    transform: translateX(0%);
+    transition: 0.3s ease-in-out;
+  }
+  .main-nav ul {
+    display: block;
+    background-color: #F5F4F1;
+    margin: 100px 0;
+  }
+  .main-nav ul li {
+    width: 100%;
+    height: 10vh;
+    margin: 0;
+    border-bottom: solid 2px #A83C40;
+  }
+  .main-nav ul li a {
+    font-size: 3.0rem;
+    text-align: center;
+    display: block;
+    padding: 25px 10px;
+    ;
+  }
+}
+.top-image {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  margin: 0 auto;
+  max-width: 1300px;
+  justify-content: center;
+  margin-top: 100px;
+}
+.two-characters_image {
+  width: 34vw;
+  min-width: 300px;
+  max-width: 480px;
+}
+.map-image {
+  width: 55vw;
+  min-width: 350px;
+  max-width: 770px;
+}
+.news-section {
+  margin-top: 70px;
+}
+.bg-image {
+  width: 100%;
+  background-image: url("../images/bg-image1.png"), url("../images/bg-image2.png");
+  background-position: left 5% top 5%, right 5% bottom 5%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto;
+}
+.news-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 150px 0px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+.news-list li {
+  width: 350px;
+  padding: 20px 0;
+}
+.news-list li h3 {
+  padding: 10px 10px;
+  text-align: left;
+}
+.news-list li img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.news-list li p {
+  text-align: left;
+  padding: 10px;
+}
+#history {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin: 0 auto;
+}
+.history-center {
+  max-width: 500px;
+  z-index: 99;
+  margin: 0 auto;
+}
+.history-left, .history-right {
+  width: 25vw;
+}
+.history-left img, .history-right img {
+  width: 100%;
+}
+.history-despriction {
+  font-size: 1.2vw;
+  line-height: 3.4rem;
+  padding: 50px;
+  text-align: justify;
+  min-width: 350px;
+}
+@media(max-width:940px) {
+  #history {
+    display: block;
+  }
+  .history-despriction {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .pc {
+    display: none;
+  }
+  .sp {
+    display: block;
+  }
+  .history-left, .history-right {
+    width: 80vw;
+    margin: 0 auto;
+  }
+}
+/*メニュー遷移ページ*/
+.menu-section {
+  margin-top: 150px;
+}
+.bg-image2 {
+  width: 100%;
+  background-image: url("../images/bg-image3.png");
+  background-position: left -14% bottom -56px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain;
+}
+.menu-wrapper {
+  margin-top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.menu-wrapper a {
+  text-decoration: none;
+  color: #333;
+  font-size: 3.6vw;
+  margin: 0 50px;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+}
+@media(max-width:1160px) {
+  .bg-image2 {
+    background-image: none;
+  }
+}
+@media(max-width:500px) {
+  .menu-wrapper img {
+    width: 350px;
+  }
+}
+.facility-introduction-section {
+  margin-bottom: 150px;
+  max-width: 1000px;
+  margin: 150px auto;
+}
+.bg-image3 {
+  width: 100%;
+  background-image: url("../images/bg-image6.png");
+  background-position: right 4% bottom 0;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain;
+}
+.facility-introduction-wrapper {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.facility-introduction_photo, .facility-introduction_despriction {
+  width: 25vw;
+}
+.facility-introduction_photo img {
+  width: 100%;
+}
+.facility-introduction_despriction p {
+  font-size: 2.4rem;
+  line-height: 3.84rem;
+  width: 100%;
+  min-width: 300px;
+  padding: 10px;
+  text-align: justify;
+}
+@media(max-width:940px) {
+  .facility-introduction-wrapper {
+    margin: 30px auto;
+  }
+  .facility-introduction_photo, .facility-introduction_despriction {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .facility-introduction_photo {
+    margin-bottom: 30px;
+  }
+  .facility-introduction_despriction p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+.access-section {
+  margin: 150px auto;
+}
+.bg-image4 {
+  width: 100%;
+  background-image: url("../images/bg-image4.png");
+  background-position: right -46% bottom 0;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto;
+}
+.map-detail {
+  width: 90vw;
+  height: 70vh;
+  overflow: hidden;
+  margin: 150px auto 100px;
+}
+.map-detail iframe {
+  height: 100%;
+  width: 100%;
+  border: solid 2px #A83C40;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+}
+.access-date {
+  width: 50vw;
+  min-width: 350px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  text-align: left;
+}
+.access-date ul li {
+  font-size: 1.3rem;
+  width: 25vw;
+  min-width: 175px;
+}
+.access-date_wrapper {
+  display: flex;
+}
+.access-date ul {
+  margin-bottom: 10px;
+}
+.access-date ul li {
+  list-style: none;
+}
+/*footer*/
+.footer-section {
+  background-color: #A83C40;
+  padding-top: 50px;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+.footer-logo {
+  text-align: left;
+  max-width: 1000px;
+  margin: 0px auto;
+}
+.footer_site-map {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.footer_site-map ul {
+  display: flex;
+  justify-content: center;
+}
+.footer_site-map ul li {
+  list-style: none;
+  margin-left: 50px;
+}
+.footer_site-map ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.6vw;
+  font-weight: 600;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+small {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+/*footer SP*/
+@media(max-width:940px) {
+  .footer_site-map ul {
+    display: block;
+    text-align: left;
+  }
+  .footer_site-map ul li {
+    margin-left: 20px;
+  }
+  .footer_site-map ul li a {
+    font-size: 20px;
+    line-height: 2.84rem;
+  }
+}
+/*ランチメニュー*/
+.lunch-menu {
+  margin-top: 150px;
+  width: 100%;
+}
+.lunch-menu h3 {
+  text-align: left;
+  width: 300px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.lunch-menu ul {
+  margin-top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.lunch-menu ul li {
+  list-style: none;
+  text-align: center;
+}
+.lunch-menu img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+.lunch-menu_despriction {
+  margin: 0 auto;
+  width: 300px;
+  text-align: left;
+  padding: 10px;
+}
+.lunch-memo {
+  margin: 100px auto;
+  padding: 10px;
+}
+.dinner-menu_link {
+  text-align: right;
+  padding: 0 20px 20px;
+}
+.dinner-menu_link a {
+  text-decoration: none;
+  color: #333;
+}
+/*ランチメニュー　SP*/
+@media(max-width:940px) {
+  .lunch-memo {
+    text-align: left;
+  }
+}
+@media(max-width:500px) {
+  .bg-image4 {
+    background-image: none;
+  }
+}
+/*ディナーメニュー*/
+.menu-heading {
+  margin: 50px auto;
+}
+.dinner-menu_top nav ul {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+.dinner-menu_top nav ul li {
+  list-style: none;
+}
+.dinner-menu_top nav ul li a {
+  color: #333;
+  font-size: 16px;
+  text-decoration: none;
+}
+.inequality-sign {
+  color: #A83C40;
+}
+.lunch-menu_link {
+  text-align: right;
+  padding: 20px;
+  margin-bottom: 150px;
+}
+.lunch-menu_link a {
+  text-decoration: none;
+  color: #333;
+}
+.heading {
+  margin-top: 50px;
+}
+.menu-heading {
+  font-size: 3.6rem;
+}
+.bg-image5 {
+  width: 100%;
+  background-image: url("../images/bg-image4.png");
+  background-position: right -46% bottom 0;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain;
+}
+.oden-section_wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.oden-photo_left, .oden-wrapper, .oden-photo_right {
+  width: 30vw;
+}
+.oden-photo_left img, .oden-top_menu, .oden-menu_wrapper, .oden-photo_right img {
+  width: 100%;
+}
+.oden-photo_left img {
+  max-width: 300px;
+  height: 50vh;
+  object-fit: cover;
+}
+.oden-photo_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.oden-top_menu p {
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  font-size: 2.0rem;
+  font-weight: 600;
+}
+.oden-menu_wrapper {
+  margin-top: 10px;
+  display: flex;
+  text-align: left;
+  justify-content: space-around;
+}
+.price-heading {
+  margin: 20px 0 10px;
+}
+.price-200yen ul li, .price-300_400_500yen ul li {
+  list-style: none;
+}
+.bg-image6 {
+  width: 100%;
+  background-image: url("../images/bg-image1.png"), url("../images/bg-image2.png");
+  background-position: left 5% top -19%, right -9% bottom 5%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto;
+}
+.sashimi-menu {
+  width: 300px;
+  margin: 50px auto 150px;
+}
+.sashimi-menu p {
+  display: flex;
+  justify-content: space-between;
+}
+.speciality-menu {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px auto;
+}
+.speciality-menu li {
+  list-style: none;
+}
+.speciality-menu img {
+  width: 300px;
+  height: 200px;
+}
+.speciality-menu p {
+  width: 300px;
+  padding: 10px;
+  text-align: justify;
+  margin: 0 auto;
+}
+.speciality-menu_title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+.bg-image7 {
+  width: 100%;
+  background-image: url("../images/bg-image5.png");
+  background-position: left -3% top 162%;
+  ;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto;
+}
+.meals-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 150px 0;
+}
+.meals-photo_left, .meals-menu, .meals-photo_right {
+  width: 30vw;
+  margin: 0 auto;
+}
+.meals-photo_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.meals-photo_left img, .meals-photo_right img {
+  width: 100%;
+  object-fit: cover;
+}
+.meals-menu p {
+  display: flex;
+  justify-content: space-between;
+}
+.cha-meshi {
+  font-size: 13px;
+}
+.justify {
+  text-align: end;
+}
+.meals-menu_memo {
+  margin-top: 50px;
+}
+.bg-image8 {
+  width: 100%;
+  background-image: url("../images/bg-image3.png");
+  background-position: left 103% bottom -56px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain;
+}
+.drink-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: left;
+  margin: 20px 0 10px;
+}
+.drink-menu_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 50px auto 150px;
+}
+.drink-menu_wrapper p {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+/*ディナーメニュー　SP*/
+@media(max-width:1040px) {
+  .oden-top_menu p {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+@media(max-width:1250px) {
+  .oden-section_wrapper {
+    display: block;
+  }
+  .oden-photo_left, .oden-wrapper, .oden-photo_right {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .oden-photo_left img, .oden-top_menu, .oden-menu_wrapper, .oden-photo_right img {
+    width: 100%;
+  }
+  .oden-pot {
+    margin: 50px auto;
+    width: 200px;
+    height: 300px;
+  }
+  .oden-top_menu p {
+    width: 333px;
+    margin: 0 auto;
+  }
+  .meals-wrapper {
+    display: block;
+    margin: 50px auto;
+  }
+  .meals-photo_left, .meals-menu, .meals-photo_right {
+    width: 80vw;
+  }
+  .meals-photo_left img, .meals-photo_right img {
+    margin: 30px 0;
+  }
+  .drink-section {
+    margin-top: 30px;
+  }
+}
+@media(max-width:700px) {
+  .bg-image5 {
+    background-position: right -46% bottom 520px;
+  }
+  .oden-menu_wrapper {
+    display: block;
+  }
+  .price-heading {
+    text-align: center;
+  }
+  .price-200yen ul {
+    padding: 10px 20px;
+  }
+  .price-300_400_500yen ul {
+    padding: 10px 20px;
+  }
+  .bg-image6 {
+    background-size: contain;
+  }
+  .speciality-menu {
+    display: block;
+  }
+  .speciality-menu li {
+    padding: 10px;
+  }
+  .bg-image7 {
+    background-image: none;
+  }
+  .meals-wrapper {
+    display: block;
+  }
+}
+@media(max-width:480px) {
+  .appetizers_meals-section {
+    padding: 0 20px;
+  }
+  .drink-menu_wrapper_space {
+    padding: 0 20px;
+  }
+  .news-list {
+    flex-direction: column;
+    width: 100%;
+  }
+  .news-list li {
+    width: 100%;
+  }
+}
+#nav-content ul li a {
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  display: inline-block;
+}
+#nav-content ul li a:hover {
+  -webkit-transform: translate(0, -5px);
+  -o-transform: translate(0, -5px);
+  transform: translate(0, -5px);
+}
+.menu-wrapper a img {
+  min-width: 325px;
+  width: 20vw;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+.menu-wrapper a img:hover {
+  -webkit-transform: scale(1.2, 1.2);
+  -o-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+}

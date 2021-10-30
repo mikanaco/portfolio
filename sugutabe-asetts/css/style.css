@@ -1,0 +1,899 @@
+@charset "utf-8";
+/* CSS Document */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+.logo-image {
+  width: 150px;
+  heigh: 80px;
+}
+.main-nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.page-header ul {
+  display: flex;
+}
+.main-nav li {
+  margin-left: 36px;
+  list-style: none;
+  vertical-align: middle;
+}
+.main-nav a {
+  font-size: 1.8vw;
+  text-decoration: none;
+  color: #333333;
+  font-family: "TBカリグラゴシック Std E";
+  writing-mode: horizontal-tb;
+}
+.button-logo {
+  display: block;
+}
+@media(max-width:800px) {
+  .main-nav {
+    display: none;
+  }
+  #nav-drawer {
+    padding: 10px 24px 0 0;
+    text-align: right;
+    position: relative;
+  }
+  .page-header ul {
+    display: block;
+  }
+  .logo {
+    display: inline-block;
+    text-align: left;
+  }
+  #nav-open {
+    width: 30px;
+    height: 22px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  #nav-open span {
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    background-color: #333333;
+  }
+  #nav-open span, #nav-open span:before, #nav-open span:after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 22px;
+    background-color: #333333;
+    display: block;
+  }
+  #nav-open span:before {
+    bottom: -8px;
+  }
+  #nav-open span:after {
+    bottom: -16px;
+  }
+  #nav-close {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+  }
+  #nav-content {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 70%;
+    height: 100%;
+    background-color: #F5F4F1;
+    text-align: left;
+    transform: translateX(-105%);
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.25);
+  }
+  .logo-image_menu {
+    width: 150px;
+    margin: 10px;
+  }
+  .page-header ul li {
+    margin: 10px;
+  }
+  #nav-input:checked ~ #nav-close {
+    display: block;
+  }
+  #nav-input:checked ~ #nav-content {
+    transform: translateX(0%);
+    transition: 0.3s ease-in-out;
+  }
+}
+.section-top__image {
+  height: 80vh;
+  width: 100%;
+  background-image: url("../images/vegex.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+  position: relative;
+}
+.section-top__image h1 {
+  writing-mode: vertical-rl;
+  font-family: "TBカリグラゴシック Std E";
+  font-size: 4rem;
+  line-height: 10rem;
+  text-align: initial;
+  position: absolute;
+  right: 15%;
+}
+.section-top__image-message1 {
+  height: 300px;
+  background-color: #fff;
+}
+.section-top__image-message2 {
+  height: 230px;
+}
+.section-top__image-message {
+  display: flex;
+}
+.section-top__image h2 {
+  writing-mode: vertical-rl;
+  font-family: "TBカリグラゴシック Std E";
+  font-size: 22px;
+  position: absolute;
+  left: 20%;
+  background-color: #fff;
+}
+.section-top__lead {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  font-weight: 600;
+  font-size: 2.8rem;
+  line-height: 5.0rem;
+}
+.sp {
+  display: none;
+}
+@media(max-width:800px) {
+  .section-top__image {
+    height: 52vh;
+  }
+  .section-top__image h1 {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    writing-mode: horizontal-tb;
+    left: 10%;
+    top: 10%;
+  }
+  .section-top__image h2 {
+    font-size: 1.6rem;
+    writing-mode: horizontal-tb;
+    text-align: left;
+    line-height: 2.3rem;
+    bottom: 20%;
+    right: 0%;
+    left: initial;
+    background-color: initial;
+  }
+  .section-top__image-message2 {
+    margin: 20px;
+    background-color: #fff;
+  }
+  .section-top__lead {
+    font-size: 1.6rem;
+    margin: 0 0 50px;
+    text-align: left;
+  }
+  .sp {
+    display: inline-block;
+  }
+}
+.three-reasons {
+  display: flex;
+}
+.three-reasons h2 {
+  font-size: 4.0rem;
+  color: #d37404;
+  line-height: 8.0rem;
+  text-align: left;
+  margin-top: 0;
+  padding: 0 70px 0 150px;
+  font-family: "TBカリグラゴシック Std E";
+}
+.three-reasons ol {
+  display: flex;
+  margin: 0 auto;
+}
+.three-reasons li {
+  list-style: none;
+  padding-right: 70px;
+  margin-bottom: 50px;
+}
+.section-three-reasons__number {
+  font-size: 4.0rem;
+  text-align: left;
+  width: 200px;
+  display: block;
+  margin-bottom: 20px;
+}
+.three-reasons li h3 {
+  font-size: 2.4rem;
+  text-align: left;
+  line-height: 3.6rem;
+}
+.three-reasons li p {
+  font-size: 2.0rem;
+  text-align: left;
+  width: 200px;
+  line-height: 3.0rem;
+}
+.three-reasons img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: solid #0e8f0f;
+  margin-top: 25px;
+}
+.three-reasons p {
+  width: 200px;
+}
+@media(max-width:1230px) {
+  .three-reasons {
+    display: block;
+    margin-bottom: 50px;
+  }
+  .three-reasons h2 {
+    padding: 0;
+    font-size: 4.0rem;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .three-reasons ol {
+    justify-content: center;
+  }
+  .pc {
+    display: none;
+  }
+}
+@media(max-width:762px) {
+  .three-reasons {
+    display: block;
+    margin-bottom: 50px;
+  }
+  .three-reasons h2 {
+    padding: 0;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .pc {
+    display: none;
+  }
+  .three-reasons li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .three-reasons li:nth-child(odd) {
+    flex-direction: column-reverse;
+  }
+  .three-reasons ol {
+    display: block;
+    text-align: center;
+  }
+  .three-reasons ol li {
+    padding: 0;
+    text-align: center;
+  }
+  .three-reasons p {
+    margin: auto;
+  }
+}
+.farmer-section h2 {
+  font-size: 4.0rem;
+  color: #d37404;
+  text-align: left;
+  font-family: "TBカリグラゴシック Std E";
+  margin-left: 150px;
+  margin-bottom: 50px;
+}
+.farmer-section {
+  margin: 0 auto 100px;
+}
+.farmer-section__lead {
+  font-size: 2.8rem;
+  line-height: 5.0rem;
+  font-weight: 600;
+  text-align: left;
+  width: 80vw;
+  margin: 0 auto 50px;
+}
+.farmer-section ul {
+  display: flex;
+  justify-content: center;
+}
+.farmer-section li {
+  list-style: none;
+}
+.farmer-section__hidamari-photo {
+  background-image: url(../images/hidamari_farm.jpg);
+  width: 30vw;
+  height: 55vh;
+  min-width: 327px;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  object-fit: cover;
+  object-position: 40% 60%;
+  position: relative;
+  margin-right: 25px;
+}
+.farmer-section__hidamari-photo-filter {
+  flex-wrap: wrap;
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.30);
+}
+.farmer-section__hidamari-photo h3 {
+  font-size: 2.0rem;
+  writing-mode: vertical-rl;
+  color: #fff;
+  height: 100%;
+  position: absolute;
+  right: 3%;
+}
+.farmer-section__hidamari-photo h4 {
+  font-size: 2.0rem;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  left: 1%;
+}
+.farmer-section__hidamari-photo span {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+}
+.farmer-section__hidamari-photo p {
+  font-size: 1.5rem;
+  text-align: left;
+  color: #fff;
+  line-height: 2.4rem;
+  width: 80%;
+  position: absolute;
+  bottom: 1%;
+  left: 5%;
+}
+.farmer-section__souryoku-photo {
+  background-image: url(../images/sanori_farm.jpg);
+  width: 30vw;
+  height: 55vh;
+  background-size: auto 150%;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  background-position: 40% -1%;
+  position: relative;
+  margin-left: 25px;
+  min-width: 327px;
+}
+.farmer-section__souryoku-photo-filter {
+  flex-wrap: wrap;
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.30);
+}
+.farmer-section__souryoku-photo h3 {
+  font-size: 2.0rem;
+  writing-mode: vertical-rl;
+  color: #fff;
+  height: 100%;
+  position: absolute;
+  right: 3%;
+}
+.farmer-section__souryoku-photo h4 {
+  font-size: 2.0rem;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  left: 1%;
+}
+.farmer-section__souryoku-photo span {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+}
+.farmer-section__souryoku-photo p {
+  font-size: 1.5rem;
+  text-align: left;
+  color: #fff;
+  line-height: 2.4rem;
+  width: 80%;
+  position: absolute;
+  bottom: 1%;
+  left: 5%;
+}
+@media(max-width:1230px) {
+  .farmer-section h2 {
+    text-align: center;
+    margin: 0 auto 50px;
+  }
+  .farmer-section__lead {}
+}
+@media(max-width:762px) {
+  .farmer-section h2 {
+    font-size: 2.2rem;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .farmer-section__lead {
+    font-size: 1.6rem;
+    margin: auto;
+    padding: 0 10px;
+    line-height: 2.4rem;
+    margin-bottom: 50px;
+  }
+  .farmer-section ul {
+    display: block;
+  }
+  .farmer-section__hidamari-photo, .farmer-section__souryoku-photo {
+    margin: 0 auto;
+  }
+  .farmer-section__souryoku-photo, .farmer-section__hidamari-photo {
+    max-height: 350px;
+  }
+  .farmer-section__souryoku-photo h3, .farmer-section__hidamari-photo h3 {
+    writing-mode: horizontal-tb;
+    color: #333;
+    font-size: 1.6rem;
+    font-weight: 600;
+    bottom: -105%;
+    right: 30%;
+  }
+  .farmer-section__hidamari-photo-filter h3 {
+    right: 15%;
+  }
+  .farmer-section__souryoku-photo h3 {
+    right: 30%;
+  }
+  .farmer-section__souryoku-photo-filter {
+    margin-top: 50px;
+  }
+}
+.trial {
+  margin-bottom: 120px;
+}
+.trial h2 {
+  font-size: 4.0rem;
+  color: #d37404;
+  text-align: left;
+  margin-left: 150px;
+  font-family: "TBカリグラゴシック Std E";
+}
+.trial__despriction {
+  font-size: 2.8rem;
+  text-align: left;
+  line-height: 8.0rem;
+  margin-left: 150px;
+}
+.trial ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 150px;
+}
+.trial li {
+  list-style: none;
+}
+.trial li img {
+  width: 38vw;
+  height: 40vh;
+  border-radius: 30px;
+  border: solid #0e8f0f;
+  object-fit: cover;
+  min-width: 370px;
+}
+.trial__farm-name {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 4.2rem;
+  text-align: center;
+}
+.trial li h4 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 4.2rem;
+  text-align: center;
+}
+.trial__plice {
+  font-size: 2.5rem;
+  line-height: 4.2rem;
+  text-align: center;
+  margin: 0;
+}
+.trial__quality-asurance-square {
+  border: solid #0e8f0f;
+  margin: 0 auto;
+  padding: 25px 30px;
+  margin-top: 50px;
+  margin-bottom: 90px;
+  max-width: 1000px
+}
+.trial__quality-asurance {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 4.5rem;
+}
+.trial__quality-asurance-despriction {
+  font-size: 2.0rem;
+  text-align: left;
+  line-height: 3.0rem;
+}
+.trial__quality-asurance-despriction-orange {
+  color: #e0a050;
+  font-weight: 600;
+}
+.button {
+  font-size: 2.8rem;
+  font-weight: 600;
+  background-color: #e0a050;
+  border-radius: 100vh;
+  margin: 0 auto;
+  padding: 20px 100px;
+  font-family: "TBカリグラゴシック Std E";
+  display: block;
+}
+.button a {
+  text-decoration: none;
+  color: #333333;
+}
+@media(max-width:1230px) {
+  .trial h2 {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+@media(max-width:1100px) {
+  .trial ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media(max-width:800px) {
+  .trial h2 {
+    font-size: 2.2rem;
+    line-height: 3.3rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .trial__despriction {
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 2.4rem;
+    line-height: left;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .trial li img {
+    width: 80vw;
+    object-fit: cover;
+    max-width: 370px;
+  }
+  .trial__farm-name, .trial li h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+  }
+  .trial li p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-bottom: 50px;
+  }
+  .trial__quality-asurance-square {
+    background-color: #0e8f0f;
+  }
+  .trial__quality-asurance {
+    color: #fff;
+    font-size: 2.4rem;
+  }
+  .trial__quality-asurance-despriction {
+    color: #fff;
+  }
+  .trial__quality-asurance-despriction-orange {
+    font-weight: 600;
+  }
+  .button {
+    font-size: 2.4rem;
+    padding: 20px 40px;
+  }
+}
+.customer-voice {
+  display: flex;
+}
+.customer-voice h2 {
+  font-size: 4.0rem;
+  color: #d37404;
+  padding: 0 70px 0 150px;
+  text-align: left;
+  font-family: "TBカリグラゴシック Std E";
+}
+.customer-voice ol {
+  display: flex;
+  margin: 0 auto;
+}
+.customer-voice ol li {
+  list-style: none;
+  margin-bottom: 100px;
+  padding-right: 70px;
+}
+.customer-voice h3 {
+  font-size: 2.4rem;
+  text-align: left;
+  line-height: 3.6rem;
+  margin-top: 50px;
+}
+.customer-voice p {
+  font-size: 2.0rem;
+  text-align: left;
+  width: 200px;
+  line-height: 3.0rem;
+}
+.voice-photo__area-kanagawa {
+  position: relative;
+}
+.voice-photo__area-chiba {
+  position: relative;
+  margin-top: 50px;
+}
+.voice-photo__area-tokyo {
+  position: relative;
+}
+.customer-voice img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: solid #0e8f0f;
+  object-fit: cover;
+}
+.voice-photo__kanagawa {
+  object-position: 40% 60%;
+}
+.voice-photo__chiba {
+  object-position: 24% 60%;
+}
+.voice-photo__tokyo {
+  object-position: 2% 18%;
+}
+.customer-voice__name-kanagawa {
+  font-size: 1.6rem;
+  width: 100px;
+  height: 25px;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #fff;
+  position: absolute;
+  bottom: 12%;
+  left: 25%;
+}
+.customer-voice__name-chiba {
+  font-size: 1.6rem;
+  width: 100px;
+  height: 25px;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #fff;
+  position: absolute;
+  bottom: 12%;
+  left: 25%;
+}
+.customer-voice__name-tokyo {
+  font-size: 1.6rem;
+  width: 100px;
+  height: 25px;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #fff;
+  position: absolute;
+  bottom: 12%;
+  left: 25%;
+}
+@media(max-width:1230px) {
+  .customer-voice {
+    display: block;
+  }
+  .customer-voice h2 {
+    padding: 0;
+    font-size: 4.0rem;
+    text-align: center;
+    margin: 0 auto 100px;
+  }
+  .customer-voice ol {
+    justify-content: center;
+  }
+}
+@media(max-width:762px) {
+  .customer-voice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .customer-voice h2 {
+    padding: 0;
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 0 auto 50px;
+  }
+  .customer-voice ol {
+    display: block;
+  }
+  .customer-voice ol li {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .customer-voice ol li:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+}
+.question h2 {
+  font-size: 4.0rem;
+  color: #d37404;
+  text-align: left;
+  font-family: "TBカリグラゴシック Std E";
+  margin: 0 150px 50px;
+}
+table.shade_table {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-align: left;
+  border-collapse: collapse;
+  background-color: #999999;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+table.shade_table th {
+  border: 1px solid black;
+  padding: 8px;
+  background-color: #DDDDDD;
+}
+table.shade_table td {
+  border: 1px solid black;
+  padding: 8px;
+}
+#table_body tr:nth-child(even) {
+  background: #fff;
+  color: #333;
+}
+@media(max-width:762px) {
+  .question h2 {
+    font-size: 2.2rem;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+}
+.footer {
+  background-color: #e0a050;
+  padding: 25px 0 100px;
+  position: relative;
+}
+.footer__containaer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__site-map {
+  display: flex;
+}
+.footer__site-map h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+  margin-left: 150px;
+}
+.footer__site-map ul {
+  margin-left: 50px;
+}
+.footer__site-map ul li {
+  list-style: none;
+  text-align: left;
+}
+.footer__site-map ul li a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.footer__sns_links ul {
+  display: flex;
+  margin-right: 150px;
+}
+.footer__sns_links ul li {
+  list-style: none;
+  padding-left: 20px;
+}
+small {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  position: absolute;
+  bottom: 0%;
+  margin: 0 auto;
+}
+.color-primary {
+  background-color: #e0a050;
+}
+.allow {
+  display: none;
+}
+@media(max-width:762px) {
+  .footer {
+    width: 100%;
+    padding: 0;
+    position: relative;
+  }
+  .footer__containaer {
+    flex-direction: column;
+  }
+  .footer__site-map {
+    display: block;
+  }
+  .footer__site-map ul {
+    margin: 10px 0 30px 30px;
+  }
+  .footer__site-map h2 {
+    display: none;
+  }
+  .footer__sns_links ul {
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .footer__sns_links ul li {
+    padding-left: 5px;
+  }
+  .footer__sns_links ul li img {
+    width: 50%;
+  }
+  small {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  .allow {
+    display: inline-block;
+    color: #999999;
+    font-weight: 600;
+    font-size: 2.0rem;
+    border: solid #999999;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    padding: 3px;
+    text-decoration: none;
+  }
+}
+if (window.matchMedia(“(max-width: 762px)”).matches) {
+  $('#pagetop').click(function () {
+    $('body,html').animate( {
+      scrollTop: 0
+    }
+    , 700);
+    return false;
+  }
+  );
+}
